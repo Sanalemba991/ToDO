@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function App() {
-  const [ok, setOk] = useState(['TOmba','Chaouba']);
+  const [ok, setOk] = useState([]);
   const [pl, setPl] = useState("");
 
   function handleInputChange(event) {
@@ -10,8 +10,8 @@ function App() {
 
   function handleAdd() {
     if (pl) {
-      setOk([...ok, pl]); // Add the current input to the ok array
-      setPl(""); // Clear the input after adding
+      setOk([...ok, pl]); 
+      setPl(""); 
     }
   }
 
@@ -28,7 +28,7 @@ function App() {
       <p>Set:</p>
       <ol>
         {ok.map((item, index) => (
-          <li key={index}>{item}</li> // Render each item in a list
+          <li key={index}>{item}</li>
         ))}
       </ol>
     </div>
